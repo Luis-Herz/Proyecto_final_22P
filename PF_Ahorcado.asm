@@ -32,6 +32,8 @@
 	la $a0, enter
 	syscall 
 	
+	jal pedirLetra
+	
 	li $v0, 4
 	la $a0, resultado		# Muestra la cadena resultado
 	syscall 
@@ -41,4 +43,18 @@
 	syscall 
 	
 	li $v0, 10
+	syscall 
+	
+	
+	pedirLetra:
+	li $v0, 4
+	la $a0, intentos			# Muestra la cadena intentos
+	syscall 
+	
+	li $v0, 4
+	la $a0, enter
+	syscall 
+	
+	li $v0, 4
+	la $a0, peticion1		# Pide luna letra al usuario 2
 	syscall 
